@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+let id = 0;
 var lib = {
   "books": [
     {
@@ -30,8 +30,9 @@ app.get("/health", (req, res) => {
 
 app.post("/api/books", (req, res) => {
   // manually add ID, with DB implementation this would be handled by DB
+  id = id + 1;
   let book = {
-    "id": 1,
+    "id": id,
     "author": req.body.author,
     "title": req.body.title,
     "yearPublished": req.body.yearPublished
