@@ -6,21 +6,21 @@ app.use(express.urlencoded({ extended: true }));
 
 let id = 0;
 var lib = {
-  "books": [
-    {
-      "id": 2,
-      "author": "Philip K. Dick",
-      "title": "Do Androids Dream of Electric Sheep?",
-      "yearPublished": 1968
-    },
-    {
-      "id": 3,
-      "author": "William Gibson",
-      "title": "Neuromancer",
-      "yearPublished": 1984
-    }
-  ]
-};
+  "books": []};
+//     {
+//       "id": 2,
+//       "author": "Philip K. Dick",
+//       "title": "Do Androids Dream of Electric Sheep?",
+//       "yearPublished": 1968
+//     },
+//     {
+//       "id": 3,
+//       "author": "William Gibson",
+//       "title": "Neuromancer",
+//       "yearPublished": 1984
+//     }
+//   ]
+// };
 
 
 app.get("/health", (req, res) => {
